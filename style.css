@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #34b1f5;
+}
+
+.container {
+  text-align: center;
+}
+
+.weather-card {
+  background: #203647;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.weather-card .input-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.weather-card input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  width: 70%;
+}
+
+.weather-card button {
+  padding: 10px 20px;
+  border: none;
+  background: #007BFF;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  margin:10px;
+  border-radius: 25px;
+}
+
+.weather-card button:hover {
+  background: #0056b3;
+}
+
+.weather-display {
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+.weather-display h2,
+.weather-display h3,
+.weather-display p {
+  margin: 10px 0;
+}
+
+.weather-display img {
+  width: 100px;
+  height: auto;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.daily-forecast {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.daily-forecast div {
+  text-align: center;
+}
+
+.daily-forecast img {
+  width: 50px;
+  height: auto;
+}
+
+.rain .rain-drop {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  bottom: 100%;
+  animation: drop 0.5s linear infinite;
+}
+
+@keyframes drop {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.rain .rain-drop:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+
+.thunderstorm .lightning {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  width: 3px;
+  height: 100%;
+  top: 0;
+  animation: flash 0.2s linear infinite;
+}
+
+@keyframes flash {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.thunderstorm .lightning:nth-child(odd) {
+  animation-delay: 0.1s;
+}
+
+
+#locationInput{
+  border: none;
+  outline: none;
+  padding: 10px;
+  transition: border 0.3s ease;
+  border-radius: 25px;
+}
